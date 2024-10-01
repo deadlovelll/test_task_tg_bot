@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  telegram_bot:
+    build: .
+    container_name: telegram_bot
+    environment:
+      - TELEGRAM_API_TOKEN=${TELEGRAM_API_TOKEN}
+    restart: unless-stopped
